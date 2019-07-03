@@ -16,7 +16,13 @@ public class Author {
     private Long id;
     private String firstName;
     private String lastName;
-    @ManyToMany
+
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet();
 
     public Author() {
