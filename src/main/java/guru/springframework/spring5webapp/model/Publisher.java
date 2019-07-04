@@ -10,24 +10,24 @@ public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String address;
+    private String name;
     private String city;
     private String state;
     private int zip;
 
-    public Publisher(String address, String city, String state, int zip) {
-        this.address = address;
+    public Publisher(String name, String city, String state, int zip) {
+        this.name = name;
         this.city = city;
         this.state = state;
         this.zip = zip;
     }
 
-    public String getAddress() {
-        return address;
+    public String getname() {
+        return name;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setname(String name) {
+        this.name = name;
     }
 
     public String getCity() {

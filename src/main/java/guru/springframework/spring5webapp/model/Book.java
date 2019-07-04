@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,6 +18,7 @@ public class Book {
     private Long id;
     private String title;
     private String isbn;
+    @OneToOne
     private Publisher publisher;
 
     @ManyToMany
